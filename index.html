@@ -1,0 +1,25 @@
+<h1>Envio de Imagem e Nome</h1>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <div>
+        <label for="imagem">Escolha uma imagem:</label>
+        <input type="file" id="imagem" name="imagem">
+    </div>
+    <div>
+        <label for="name">Nome da imagem:</label>
+        <input type="text" id="name" name="name">
+    </div>
+    <div>
+        <label for="id">ID</label>
+        <input type="text" id="id" name="id">
+    </div>
+    <div>
+        <label for="Folders">Tipo</label>
+        <select name="type" id="Folders">
+            <option value="user">user</option>
+            <option value="assets">assets</option>
+            <option value="series">series</option>
+            <option value="series-assets">series-assets</option>
+        </select>
+    </div>
+    <button type="submit">Enviar</button>
+</form>

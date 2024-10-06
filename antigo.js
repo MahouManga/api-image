@@ -436,9 +436,9 @@ const servirArquivos = (directory, req, res) => {
   res.status(404).send('Arquivo não encontrado');
 };
 
-/*app.get('/', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
-});*/
+});
 
 app.get('/image/:name', (req, res) => {
   const directoryPath = path.join(__dirname, 'public/image');
