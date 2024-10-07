@@ -1,25 +1,37 @@
-<h1>Envio de Imagem e Nome</h1>
-<form action="/upload" method="post" enctype="multipart/form-data">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Envio de Imagem e Nome</title>
+</head>
+<body>
+  <h1>Envio de Imagem e Nome</h1>
+  <form id="uploadForm" enctype="multipart/form-data">
     <div>
-        <label for="imagem">Escolha uma imagem:</label>
-        <input type="file" id="imagem" name="imagem">
+      <label for="imagem">Escolha uma imagem:</label>
+      <input type="file" id="imagem" name="imagem" required />
     </div>
     <div>
-        <label for="name">Nome da imagem:</label>
-        <input type="text" id="name" name="name">
+      <label for="name">Nome da imagem:</label>
+      <input type="text" id="name" name="name" required />
     </div>
     <div>
-        <label for="id">ID</label>
-        <input type="text" id="id" name="id">
+      <label for="id">ID:</label>
+      <input type="text" id="id" name="id" />
     </div>
     <div>
-        <label for="Folders">Tipo</label>
-        <select name="type" id="Folders">
-            <option value="user">user</option>
-            <option value="assets">assets</option>
-            <option value="series">series</option>
-            <option value="series-assets">series-assets</option>
-        </select>
+      <label for="Folders">Tipo:</label>
+      <select name="type" id="Folders" required>
+        <option value="user">user</option>
+        <option value="assets">assets</option>
+        <option value="series">series</option>
+        <option value="series-assets">series-assets</option>
+      </select>
     </div>
     <button type="submit">Enviar</button>
-</form>
+  </form>
+
+  <!-- Inclua o script externo -->
+  <script src="/script.js"></script>
+</body>
+</html>
