@@ -44,7 +44,7 @@ const servirArquivos = (directory, req, res) => {
             return res.sendFile(filePath);
         }
     }
-    res.status(404).send('Arquivo não encontrado');
+    res.status(204).end();
 };
 
 module.exports = {

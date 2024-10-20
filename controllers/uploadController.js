@@ -36,9 +36,9 @@ exports.uploadImage = (req, res, next) => {
 };
 
 exports.uploadZipFile = async (req, res, next) => {
-  const { serieID, index, volume } = req.body;
+  const { serieID, chapterID } = req.body;
 
-  if (!serieID || !index) {
+  if (!serieID || !chapterID) {
     return res.status(400).json({ error: 'ID da obra e capítulo são obrigatórios.' });
   }
 
@@ -50,7 +50,7 @@ exports.uploadZipFile = async (req, res, next) => {
   const extractionPath = path.join(
     __dirname,
     '..',
-    `public/series/${serieID}/chapters/vol-${volume}-cap-${index}`
+    `public/series/${serieID}/chapters/${chapterID}`
   );
 
   try {
