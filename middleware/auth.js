@@ -7,7 +7,9 @@ const authenticateToken = (req, res, next) => {
   }
 
   if (token !== process.env.ACCESS_TOKEN) {
-    return res.status(403).json({ error: 'Acesso proibido: token inválido.', token: token + ' - ' + process.env.ACCESS_TOKEN });
+    console.log('enviado', token)
+    console.log('token', process.env.ACCESS_TOKEN)
+    return res.status(403).json({ error: 'Acesso proibido: token inválido.'});
   }
   next();
 

@@ -1,5 +1,6 @@
 // Substitua 'seu_token_de_acesso' pelo token definido no servidor
-const accessToken = 'TEMPORARIO';
+require('dotenv').config();
+const accessToken = process.env.ACCESS_TOKEN || 'TEMPORARIO';
 
 const form = document.getElementById('uploadForm');
 
